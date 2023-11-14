@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 20px;
+  height: 50px;
+}
+
+.dark-mode .App-header {
+  background-color: darkblue;
+}
+
+.light-mode .App-header {
+  background-color: aquamarine;
+}
+
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: gray;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+  background-color: #f0f0f0; 
+  padding: 0;
+  font-family: sans-serif; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body .light-mode {
+  background-color: white;
+}
+
+body .dark-mode {
+  background-color: gray;
+}
+
+button {
+  padding: 10px;
+  border: 2px solid gray; 
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+}
+
+.light-mode .login-container button {
+  background-color: aquamarine;
+  color: black;
+}
+
+.dark-mode .login-container button {
+  background-color: darkblue;
+  color: white;
+}
+
+.login-container button {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 25%;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  color: white; 
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group input {
+  border-radius: 15px; 
+  justify-content: space-between;
+  width: 60%;
+  padding: 8px;
+  margin-top: 5px;
+  align-items: 'center';
+  align-self: center;
+}
+
+.login-container button {
+  width: 50%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  align-self: center;
+}
+
+.main-container {
+  padding: 20px;
 }
